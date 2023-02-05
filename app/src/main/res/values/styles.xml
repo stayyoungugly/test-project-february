@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ParamTitleTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="fontFamily">@font/spot_black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="ProgressTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/spot_book</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/spot_bold</item>
+        <item name="android:background">@drawable/button_back</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Button.Lottie">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Button.Big">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TimeValueTextView">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@drawable/timer_back</item>
+        <item name="android:fontFamily">@font/spot_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="TimeTitleTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/spot_book</item>
+    </style>
+
+    <style name="ReviewTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/spot_book</item>
+    </style>
+
+</resources>

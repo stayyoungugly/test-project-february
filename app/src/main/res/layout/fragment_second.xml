@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_back">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lt_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_random_first"
+                    style="@style/ProgressTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/random_value"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_first_progress"
+                    app:layout_constraintStart_toStartOf="@+id/pb_first"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/pb_first"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:progressDrawable="@drawable/random_progress_drawable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_random_first" />
+
+                <TextView
+                    android:id="@+id/tv_first_progress"
+                    style="@style/ProgressTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/done"
+                    app:layout_constraintBottom_toTopOf="@+id/pb_first"
+                    app:layout_constraintEnd_toEndOf="@+id/pb_first" />
+
+                <TextView
+                    android:id="@+id/tv_random_second"
+                    style="@style/ProgressTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/random_value_2"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="@id/tv_second_progress"
+                    app:layout_constraintStart_toStartOf="@+id/pb_second"
+                    app:layout_constraintTop_toBottomOf="@id/pb_first" />
+
+                <ProgressBar
+                    android:id="@+id/pb_second"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:progressDrawable="@drawable/random_progress_drawable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_random_second" />
+
+                <TextView
+                    android:id="@+id/tv_second_progress"
+                    style="@style/ProgressTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/done"
+                    app:layout_constraintBottom_toTopOf="@+id/pb_second"
+                    app:layout_constraintEnd_toEndOf="@+id/pb_second" />
+
+                <Button
+                    android:id="@+id/btn_random"
+                    style="@style/Button.Big"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/randomize_values"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pb_second" />
+
+                <TextView
+                    android:id="@+id/tv_hour_value"
+                    style="@style/TimeValueTextView"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/_1"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_minute_value"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_random" />
+
+                <TextView
+                    android:id="@+id/tv_minute_value"
+                    style="@style/TimeValueTextView"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/_00"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_seconds_value"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_hour_value"
+                    app:layout_constraintTop_toTopOf="@id/tv_hour_value" />
+
+                <TextView
+                    android:id="@+id/tv_seconds_value"
+                    style="@style/TimeValueTextView"
+                    android:text="@string/_0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_minute_value"
+                    app:layout_constraintTop_toTopOf="@id/tv_hour_value" />
+
+                <TextView
+                    android:id="@+id/tv_hour_title"
+                    style="@style/TimeTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/hours"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_hour_value"
+                    app:layout_constraintStart_toStartOf="@+id/tv_hour_value"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hour_value" />
+
+                <TextView
+                    android:id="@+id/tv_minute_title"
+                    style="@style/TimeTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minutes"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_minute_value"
+                    app:layout_constraintStart_toStartOf="@+id/tv_minute_value"
+                    app:layout_constraintTop_toTopOf="@+id/tv_hour_title" />
+
+                <TextView
+                    android:id="@+id/tv_seconds_title"
+                    style="@style/TimeTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seconds"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_seconds_value"
+                    app:layout_constraintStart_toStartOf="@+id/tv_seconds_value"
+                    app:layout_constraintTop_toTopOf="@+id/tv_hour_title" />
+
+                <TextView
+                    android:id="@+id/tv_load"
+                    style="@style/ProgressTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/load_data_from_server"
+                    app:layout_constraintStart_toStartOf="@+id/pb_load_data"
+                    app:layout_constraintTop_toBottomOf="@id/tv_hour_title" />
+
+                <ProgressBar
+                    android:id="@+id/pb_load_data"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:progressDrawable="@drawable/load_progress_drawable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_load" />
+
+                <TextView
+                    android:id="@+id/tv_load_progress"
+                    style="@style/ProgressTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/done"
+                    app:layout_constraintBottom_toTopOf="@+id/pb_load_data"
+                    app:layout_constraintEnd_toEndOf="@+id/pb_load_data" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/spot_book"
+                android:text="@string/ratings"
+                android:textColor="@color/light_gray"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lt_info" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_ratings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:focusableInTouchMode="false"
+                android:isScrollContainer="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:fastScrollEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ratings"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_review" />
+
+            <TextView
+                android:id="@+id/tv_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/spot_light"
+                android:text="@string/no_reviews_yet"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ratings" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
