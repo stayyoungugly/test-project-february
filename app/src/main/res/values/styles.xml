@@ -33,7 +33,7 @@
 
     <style name="Button.Lottie">
         <item name="android:layout_marginTop">8dp</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="Button.Big">
@@ -58,7 +58,7 @@
 
     <style name="ReviewTextView">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:fontFamily">@font/spot_book</item>
     </style>
 
